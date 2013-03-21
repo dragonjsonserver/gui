@@ -1,0 +1,58 @@
+<?php
+/**
+ * @link http://dragonjsonserver.de/
+ * @copyright Copyright (c) 2012-2013 DragonProjects (http://dragonprojects.de/)
+ * @license http://license.dragonprojects.de/dragonjsonserver.txt New BSD License
+ * @author Christoph Herrmann <developer@dragonprojects.de>
+ * @package DragonJsonServerGUI
+ */
+?>
+<div id="dragonjsonservergui">
+    <form class="form-horizontal">
+        <div class="row-fluid">
+            <div class="span6">
+                <fieldset>
+                    <legend>URI</legend>
+                    <div class="control-group">
+                        <label class="control-label" for="uri">URI:</label>
+                        <div class="controls">
+                            <input id="uri" name="uri" type="text" readonly="readonly" />
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>API Klasse</legend>
+                    <div class="control-group">
+                        <label class="control-label" for="namespace">Namensraum:</label>
+                        <div class="controls">
+                            <select id="namespace" name="namespace" onchange="gui.selectNamespace();"></select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="method">Methode:</label>
+                        <div class="controls">
+                            <select id="method" name="method" onchange="gui.selectMethod();"></select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Argumente</legend>
+                    <div id="arguments"></div>
+                </fieldset>
+            </div>
+            <div class="span6">
+                <button type="submit" class="btn" onclick="gui.send(); return false;">Anfrage senden</button>
+                <br /><br />
+                <div id="response"></div>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">
+    var gui;
+    $(document).ready(function () {
+        var serverurl = document.URL.substr(0, document.URL.indexOf('?')) + 'jsonrpc2.php';
+        var client = new DragonJsonServer.Client(serverurl);
+        gui = new DragonJsonServerGUI.GUI(client);
+    });
+</script>

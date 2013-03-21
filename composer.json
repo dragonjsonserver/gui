@@ -1,0 +1,33 @@
+{
+    "name": "dragonprojects/dragonjsonservergui",
+    "description": "GUI for JsonRPC 2 APIs based on Zend Framework 2 and DragonJsonServer",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Christoph Herrmann",
+            "email": "developer@dragonprojects.de",
+            "homepage": "http://dragonjsonserver.de/",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "jsonrpc2",
+        "dragonjsonservergui",
+        "dragonjsonserver",
+        "dragonprojects"
+    ],
+    "homepage": "http://dragonjsonserver.de/",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*",
+        "dragonprojects/dragonjsonserver": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "DragonJsonServerGUI": "src/"
+        },
+        "classmap": [
+            "Module.php"
+        ]
+    }
+}
