@@ -18,7 +18,7 @@
     ],
     "homepage": "http://dragonjsonserver.de/",
     "require": {
-        "php": ">=5.3.3",
+        "php": ">=5.4.0",
         "zendframework/zendframework": "2.*",
         "dragonprojects/dragonjsonserver": "dev-master"
     },
