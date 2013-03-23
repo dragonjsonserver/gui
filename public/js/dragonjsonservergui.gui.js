@@ -106,6 +106,7 @@ DragonJsonServerGUI.GUI = function (client)
         return this;
     };
 
+    var self = this;
     /**
      * Selektiert eine andere Methode und baut die GUI entsprechend um
      * @param boolean clearresponse
@@ -169,7 +170,7 @@ DragonJsonServerGUI.GUI = function (client)
 	                    		}))
 	                    	.append($('<a class="btn"><i class="icon-refresh"></i></a>')
                     			.click(function(element) {
-                    				this.selectMethod();
+                    				self.selectMethod();
 	                    		}));
                     	break;
 	            	case 'boolean':
