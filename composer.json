@@ -1,6 +1,6 @@
 {
     "name": "dragonprojects/dragonjsonservergui",
-    "description": "GUI for JsonRPC 2 APIs based on Zend Framework 2 and DragonJsonServer",
+    "description": "Extension for DragonJsonServer to generate a GUI with the SMD",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -9,12 +9,6 @@
             "homepage": "http://dragonjsonserver.de/",
             "role": "Developer"
         }
-    ],
-    "keywords": [
-        "jsonrpc2",
-        "dragonjsonservergui",
-        "dragonjsonserver",
-        "dragonprojects"
     ],
     "homepage": "http://dragonjsonserver.de/",
     "require": {
