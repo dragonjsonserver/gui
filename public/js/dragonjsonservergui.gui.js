@@ -238,7 +238,6 @@ DragonJsonServerGUI.GUI = function (client)
                 async : false,
                 success : function (json) {
 	            	$('#response').html('<pre>' + $('<div/>').text(JSON.stringify(json, null, 4)).html() + '</pre>');
-	            		console.log(json);
 	                    if (json.result != undefined) {
 	                    	defaultdata = $.extend(json.result, defaultdata);
 	                    }
