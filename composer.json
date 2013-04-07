@@ -1,6 +1,6 @@
 {
     "name": "dragonprojects/dragonjsonservergui",
-    "description": "Extension for DragonJsonServer to generate a GUI with the SMD",
+    "description": "Erweiterung für den DragonJsonServer zur Erstellung einer GUI aus der SMD",
     "license": "BSD-3-Clause",
     "authors": [
         {
