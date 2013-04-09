@@ -47,7 +47,7 @@ class Module
         $event->getApplication()->getEventManager()
             ->attach(\Zend\Mvc\MvcEvent::EVENT_DISPATCH, function (\Zend\Mvc\MvcEvent $event) {
                 $event->getViewModel()->setVariables(
-                    $event->getApplication()->getServiceManager()->get('Config')['application']
+                    $event->getApplication()->getServiceManager()->get('Config')['dragonjsonserver']['application']
                 );
         });
     }
