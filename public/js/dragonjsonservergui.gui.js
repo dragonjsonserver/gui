@@ -31,17 +31,17 @@ DragonJsonServerGUI.GUI = function (client)
         $("#arguments input[type='text']").each(function (index, element) {
         	element = $(element);
         	var value = element.val();
-            if (value != '') {
+            if ('' != value) {
             	var parametername = element.attr('data-parametername');
-            	if (parametername != undefined) {
+            	if (undefined != parametername) {
             		var keyname = element.attr('data-keyname');
-            		if (keyname != undefined) {
-                		if (data[parametername] == undefined) {
+            		if (undefined != keyname) {
+                		if (undefined == data[parametername]) {
                 			data[parametername] = {};
                 		}
                 		data[parametername][keyname] = value;
             		} else {
-                		if (data[parametername] == undefined) {
+                		if (undefined == data[parametername]) {
                 			data[parametername] = [];
                 		}
                 		data[parametername].push(value);
@@ -53,7 +53,7 @@ DragonJsonServerGUI.GUI = function (client)
         });
         $("#arguments input[type='checkbox']").each(function (index, element) {
 			element = $(element);
-        	data[element.attr('name')] = element.attr('checked') == 'checked';
+        	data[element.attr('name')] = 'checked' == element.attr('checked');
         });
         return data;
     };
@@ -92,7 +92,7 @@ DragonJsonServerGUI.GUI = function (client)
      */
     this.selectNamespace = function (query)
     {
-    	if (query && query.namespace != undefined) {
+    	if (query && undefined != query.namespace) {
 	        $('#namespace').val(query.namespace);
     	}
         var namespace = $('#namespace').val();
@@ -118,7 +118,7 @@ DragonJsonServerGUI.GUI = function (client)
     	if (clearresponse) {
     		$('#response').html('<pre>Antwort</pre>');
     	}
-    	if (query && query.method != undefined) {
+    	if (query && undefined != query.method) {
 	        $('#method').val(query.method);
     	}
         $.extend(defaultdata, getData());
@@ -140,13 +140,13 @@ DragonJsonServerGUI.GUI = function (client)
                 if (parameter.optional) {
                 	value = parameter.default;
                 }
-                if (defaultdata[parameter.name] != undefined) {
+                if (undefined != defaultdata[parameter.name]) {
                 	value = defaultdata[parameter.name];
                 }
                 
                 switch (parameter.type) {
 	            	case 'array':
-	                	if (value == undefined) {
+	                	if (undefined == value) {
 	                		value = [''];
 	                	}
                     	$.each(value, function(subindex, subvalue) {
@@ -174,7 +174,7 @@ DragonJsonServerGUI.GUI = function (client)
 	                    		}));
                     	break;
 	            	case 'boolean':
-                    	if (value == undefined) {
+                    	if (undefined == value) {
                     		value = false;
                     	}
                     	controls
@@ -183,7 +183,7 @@ DragonJsonServerGUI.GUI = function (client)
 				                .change(function() { updateUri(); }));
                     	break;
                 	case 'object':
-                    	if (value == undefined) {
+                    	if (undefined == value) {
                     		value = {'':''};
                     	}
                     	$.each(value, function(subindex, subvalue) {
@@ -201,7 +201,7 @@ DragonJsonServerGUI.GUI = function (client)
                     	});
                 		break;
                 	default:
-                    	if (value == undefined) {
+                    	if (undefined == value) {
                     		value = '';
                     	}
                     	controls
@@ -238,7 +238,7 @@ DragonJsonServerGUI.GUI = function (client)
                 async : false,
                 success : function (json) {
 	            	$('#response').html('<pre>' + $('<div/>').text(JSON.stringify(json, null, 4)).html() + '</pre>');
-	                    if (json.result != undefined) {
+	                    if (undefined != json.result) {
 	                    	defaultdata = $.extend(json.result, defaultdata);
 	                    }
                 },
@@ -256,7 +256,7 @@ DragonJsonServerGUI.GUI = function (client)
         	namespaces = {};
             $.each(json.services, function(servicename, service) {
                 var namespace = servicename.substr(0, servicename.lastIndexOf('.'));
-                if (typeof(namespaces[namespace]) == 'undefined') {
+                if ('undefined' == typeof(namespaces[namespace])) {
                 	namespaces[namespace] = {};
                 }
                 var method = servicename.substr(servicename.lastIndexOf('.') + 1);
