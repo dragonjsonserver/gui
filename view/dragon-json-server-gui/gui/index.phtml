@@ -51,8 +51,7 @@
 <script type="text/javascript">
     var gui;
     $(document).ready(function () {
-        var serverurl = document.URL.substr(0, document.URL.indexOf('?')) + 'jsonrpc2.php';
-        var client = new DragonJsonServer.Client(serverurl);
+        var client = new DragonJsonServer.Client('<?= $this->escapeJs($this->server) ?>');
         gui = new DragonJsonServerGUI.GUI(client);
     });
 </script>

@@ -12,5 +12,7 @@ namespace DragonJsonServerGUI\Controller;
 class GUIController extends \Zend\Mvc\Controller\AbstractActionController
 {
     public function indexAction()
-    {}
+    {
+    	return array('server' => $this->getServiceLocator()->get('Config')['dragonjsonserver']['server']);
+    }
 }
