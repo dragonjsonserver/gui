@@ -32,10 +32,6 @@ return [
     ],
     'view_manager' => [
         'doctype' => 'HTML5',
-        'template_map' => [
-            'layout/layout' => __DIR__ . '/../view/layout/layout.phtml',
-            'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-        ],
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],

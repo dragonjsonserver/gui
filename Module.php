@@ -49,6 +49,7 @@ class Module
                 $event->getViewModel()->setVariables(
                     $event->getApplication()->getServiceManager()->get('Config')['dragonjsonserver']['application']
                 );
-        });
+        	}
+        );
     }
 }
