@@ -18,7 +18,19 @@ return [
                 'options' => [
                     'route' => '/',
                     'defaults' => [
-                        'controller' => 'DragonJsonServerGUI\Controller\GUI',
+                    	'__NAMESPACE__' => 'DragonJsonServerGUI\Controller',
+                        'controller' => 'GUI',
+                        'action' => 'index',
+                    ],
+                ],
+            ],
+            'dragonjsonclient' => [
+                'type' => 'Zend\Mvc\Router\Http\Literal',
+                'options' => [
+                    'route' => '/dragonjsonclient',
+                    'defaults' => [
+                    	'__NAMESPACE__' => 'DragonJsonServerGUI\Controller',
+                        'controller' => 'GUI',
                         'action' => 'index',
                     ],
                 ],
