@@ -55,3 +55,10 @@
         gui = new DragonJsonServerGUI.GUI(client);
     });
 </script>
+<?php 
+$this->inlineScript()
+	->appendFile($this->basePath() . '/js/dragonjsonserver.client.js')
+	->appendFile($this->basePath() . '/js/dragonjsonserver.request.js')
+	->appendFile($this->basePath() . '/js/URI.js')
+	->appendFile($this->basePath() . '/js/dragonjsonservergui.gui.js') 
+?>
