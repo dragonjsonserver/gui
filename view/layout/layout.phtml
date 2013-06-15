@@ -18,7 +18,6 @@
                 ->appendStylesheet($this->basePath() . '/css/bootstrap-responsive.min.css')
                 ->appendStylesheet($this->basePath() . '/css/style.css') ?>
         <?= $this->headScript()
-                ->appendFile($this->basePath() . '/js/html5shiv.js', 'text/javascript', ['conditional' => 'lt IE 9'])
                 ->appendFile($this->basePath() . '/js/jquery.min.js')
                 ->appendFile($this->basePath() . '/js/bootstrap.min.js')
                 ->appendFile($this->basePath() . '/js/dragonjsonserver.client.js')
