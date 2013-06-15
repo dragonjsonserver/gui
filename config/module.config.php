@@ -18,8 +18,7 @@ return [
                 'options' => [
                     'route' => '/',
                     'defaults' => [
-                    	'__NAMESPACE__' => 'DragonJsonServerGUI\Controller',
-                        'controller' => 'GUI',
+                        'controller' => 'DragonJsonServerGUI\Controller\GUI',
                         'action' => 'index',
                     ],
                 ],
@@ -29,8 +28,7 @@ return [
                 'options' => [
                     'route' => '/dragonjsonclient',
                     'defaults' => [
-                    	'__NAMESPACE__' => 'DragonJsonServerGUI\Controller',
-                        'controller' => 'GUI',
+                        'controller' => 'DragonJsonServerGUI\Controller\GUI',
                         'action' => 'index',
                     ],
                 ],
