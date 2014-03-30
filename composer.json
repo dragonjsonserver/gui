@@ -1,6 +1,6 @@
 {
     "name": "dragonprojects/dragonjsonservergui",
-    "description": "Erweiterung für den DragonJsonServer zur Erstellung einer GUI aus der SMD",
+    "description": "(Deprecated - Ersetzt durch "dragonjsonapiclient") Erweiterung für den DragonJsonServer zur Erstellung einer GUI aus der SMD",
     "license": "BSD-3-Clause",
     "authors": [
         {
